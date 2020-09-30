@@ -40,3 +40,5 @@ class Queue {
     // the time complexity of removing an item from a queue is constant, O(1).
   }
 }
+
+module.exports = Queue;
