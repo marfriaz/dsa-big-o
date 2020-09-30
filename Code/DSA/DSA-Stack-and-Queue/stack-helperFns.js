@@ -1,5 +1,4 @@
 "use strict";
-const Stack = require("./stack-class");
 
 //=== 2. Useful methods for a stack ===//
 
@@ -10,22 +9,29 @@ const Stack = require("./stack-class");
 // * Remove McCoy from your stack and display the stack
 
 function peek(stack) {
-  if (!stack.top) return null;
-  return stack.top.value;
+  if (stack.top === null) {
+    return console.log("The stack is empty.");
+  }
+  return console.log(stack.top.data);
 }
 
 function isEmpty(stack) {
-  return stack.top === null;
+  if (stack.top === null) {
+    return console.log("The stack is empty.");
+  }
+  return console.log("The stack is NOT empty.");
 }
 
 function display(stack) {
-  let currNode = stack.top;
-  if (currNode === null) console.log("empty stack");
-  while (currNode.next !== null) {
-    console.log(currNode.value);
-    currNode = currNode.next;
+  if (stack.top === null) {
+    return console.log("The stack is empty.");
   }
-  console.log(currNode.value);
+  let node = stack.top;
+  while (node.next !== null) {
+    console.log(node.data);
+    node = node.next;
+  }
+  console.log(node.data);
 }
 
 module.exports = {
@@ -33,3 +39,5 @@ module.exports = {
   isEmpty,
   display,
 };
+
+

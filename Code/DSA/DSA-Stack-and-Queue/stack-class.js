@@ -39,3 +39,5 @@ class Stack {
     // Since we are removing only from the top of the stack, the time complexity of removing an item from a stack is constant, O(1).
   }
 }
+
+module.exports = Stack;
