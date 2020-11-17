@@ -1,7 +1,7 @@
 ("use strict");
 
 const Stack = require("../stack/stack-class");
-const { peek, isEmpty, display } = require("./queue-helperFns");
+const { peek, isEmpty, display } = require("../stack/stack-helperFns");
 
 //=== 8. Queue implementation using a stack ===//
 // There are many ways to implement a queue. You have learned using singly linked list,
@@ -13,6 +13,7 @@ class stackQueue extends Stack {
   constructor() {
     super();
     this.first = this.top;
+    // it's call this.top on stack but want it as first for queue
     this.last = null;
   }
 
@@ -21,6 +22,7 @@ class stackQueue extends Stack {
     if (this.first === null) {
       this.push(item);
       this.last = this.top;
+      // stack = top while queue = last
     } else {
       //we have stuff in the stack already and need to:
       //1. invert the stack into tempStack
@@ -54,10 +56,11 @@ module.exports = stackQueue;
 
 function main() {
   const queue = new stackQueue();
-
+  queue.enqueue(1);
   queue.enqueue(2);
   queue.enqueue(3);
   queue.enqueue(4);
-  console.log(queue);
+  display(queue);
 }
+
 main();

@@ -5,7 +5,7 @@ const { peek, isEmpty, display } = require("./queue-helperFns");
 
 //=== 6. Create a queue using Singly linked list ===//
 
-// Create a stack called starTrek and add Kirk, Spock, McCoy, and Scotty to the stack.
+// Create a queue called starTrek and add Kirk, Spock, McCoy, and Scotty to the stack.
 function queueTest() {
   const starTrekQ = new Queue();
 

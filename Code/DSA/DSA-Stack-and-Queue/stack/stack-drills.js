@@ -103,13 +103,13 @@ console.log(matchingParens("((3 + 2))"));
 function sort(stack) {
   let sortStack = new Stack();
   while (stack.top) {
-    let x = stack.pop();
-    while (sortStack.top && sortStack.top.data > x) {
+    let inputPopped = stack.pop();
+    while (sortStack.top && sortStack.top.data > inputPopped) {
       stack.push(sortStack.pop());
     }
-    sortStack.push(x);
+    sortStack.push(inputPopped);
   }
-  return console.log(display(sortStack));
+  return display(sortStack);
 }
 let numStack = new Stack();
 numStack.push(2);

@@ -1,0 +1,30 @@
+.AccountPage {
+  margin: 10px 5px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.AccountPage__header {
+  display: flex;
+  justify-content: center;
+}
+
+.AccountPage__card__header {
+  text-align: left;
+  font-weight: bold;
+}
+
+.AccountPage__card {
+  text-align: left;
+  margin: 10px 5px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.AccountPage__card__fields {
+  display: flex;
+  flex-wrap: wrap;
+}
